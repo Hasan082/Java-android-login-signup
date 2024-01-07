@@ -1,9 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".auth.LoginActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="40sp"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/primary"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loginimg"
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_height="240dp"
+                android:layout_gravity="center"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_url="https://lottie.host/9fe53056-86d2-40a8-a237-87971c0d722a/YiKBf3enuC.json"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="16sp"
+                android:hint="Username"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/edittext_bg"
+                android:inputType="text|textCapSentences|textAutoCorrect"
+                android:importantForAutofill="no"
+                tools:ignore="TextFields" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="16sp"
+                android:hint="Password"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/edittext_bg"
+                android:autofillHints=""
+                android:inputType="text|textCapSentences|textAutoCorrect"
+                tools:ignore="TextFields" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Login"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_bg_btn"
+                />
+            <TextView
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Forget your Password?"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"> <!-- Set weightSum to the total number of ImageViews -->
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+            android:src="@drawable/facebook" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+            android:src="@drawable/linkedin" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+            android:src="@drawable/twitter" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
